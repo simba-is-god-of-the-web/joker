@@ -1,6 +1,6 @@
 # PROTOCOL.md #
 ## Basic format ##
-```json
+```js
 {
 	"type": String,	//操作的對象
 	"roomId": Number,	//房間ID
@@ -11,7 +11,7 @@
 ```
 ## From client ##
 ### Create new room ###
-```json
+```js
 {
 	"type": "room",
 	"roomId": Number,
@@ -23,7 +23,7 @@
 }
 ```
 ### Update ###
-```json
+```js
 {
 	"type": "room",
 	"roomId": Number,
@@ -35,7 +35,7 @@
 }
 ```
 ### Take a card from other user ###
-```json
+```js
 {
 	"type": "card",
 	"roomId": Number,
@@ -50,7 +50,7 @@
 }
 ```
 ### Play a peer of cards ###
-```json
+```js
 {
 	"type": "card",
 	"roomId": Number,
@@ -65,7 +65,7 @@
 ```
 ## From server ##
 ### Update ###
-```json
+```js
 {
 	"type": "room",
 	"roomId": Number,
@@ -81,7 +81,7 @@
 }
 ```
 ### Create room ###
-```json
+```js
 {
 	"type": "room",
 	"roomId": Number,
