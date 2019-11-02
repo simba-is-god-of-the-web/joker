@@ -1,12 +1,12 @@
 ;
-class PokerCards{
+class Poker{
 	constructor(suit = 0, num = 1){
 		this.suit = suit;
 		this.number = num;
 	}
 }
 
-class Poker{
+class PokerCards{
 	constructor(){
 		this.pool = [];
 	}
@@ -29,14 +29,16 @@ class Poker{
 	}
 }
 (function($){
-	$.fn.poker.print = function(card, x, y){
+	$.fn.pokerPrint = function(card, x, y){
 		if(!(card instanceof Poker)){
 			return this;
 		}
+		console.log(this);
 		const ctx = this[0].getContext('2d');
-		ctx.fillstyle = '#000000';
+		ctx.fillstyle = '#ffffff';
 		
 		ctx.fillRect(x, y, x+150, y+200);
+		return this;
 	}
 })(jQuery);
 console.log('poker loded');
