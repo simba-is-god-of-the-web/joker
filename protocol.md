@@ -76,7 +76,7 @@
 		"userId1": [card1, card2, ......],
 		"userId2": [card1, card2, ......],
 		"userId3": [card1, card2, ......],
-		"userId4": [card1, card2, ......],
+		"userId4": [card1, card2, ......]
 	}
 }
 ```
