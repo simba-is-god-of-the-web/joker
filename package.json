@@ -1,0 +1,22 @@
+{
+  "name": "joker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simba-is-god-of-the-web/joker.git"
+  },
+  "keywords": [
+    "joker"
+  ],
+  "author": "simba-fs jc533",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simba-is-god-of-the-web/joker/issues"
+  },
+  "homepage": "https://github.com/simba-is-god-of-the-web/joker#readme"
+}
