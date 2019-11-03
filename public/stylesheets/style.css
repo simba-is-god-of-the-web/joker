@@ -1,40 +1,4 @@
 body {
-	height: 70vh;
-}
-
-#playground, #canvas {
-	height: 100%;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.card {
-	border: 10px;
-	background-color: #bbbbbb;
-	margin: 10px;
-	padding: 10px;
-	height: 300px;
-	width: 190px;
-	border-radius: 10px;
-	position: relative;
-}
-
-.suit, .number{
-	position: absolute;
-	font-size: 100px;
-}
-.suit-positive{
-	top: -25%;
-	left: -3%;
-}
-.suit-negative {
-	top: 45%;
-	left: 60%;
-	transform: rotate(-180deg);
-}
-
-.number {
-	top: 14%;
-	left: 30%;
+	background-color: #55c2be;
+	//background-image: linear-gradient(to top, #55c2be, #5582c2, #6255c2, #8655c2);
 }
