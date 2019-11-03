@@ -28,16 +28,34 @@ class PokerCards{
 		}
 	}
 }
+const suit = ['♠', '♥', '♦', '♣',];
+function pokerNum(n){
+	switch(n){
+		case 1:
+			return 'A';
+		case 11:
+			return 'J';
+		case 12:
+			return 'Q';
+		case 13:
+			return 'K';
+		default:
+			return n;
+	}
+}
 (function($){
-	$.fn.pokerPrint = function(card, x, y){
+	var cardExample = $('.card').eq(0);
+	var pg = $('#playground');
+	cardExample.remove();
+	$.fn.pokerPrint = function(card){
 		if(!(card instanceof Poker)){
 			return this;
 		}
-		console.log(this);
-		const ctx = this[0].getContext('2d');
-		ctx.fillstyle = '#ffffff';
+		pg.append(cardExample.clone()
+			.find('.suit').text(suit[card.suit]).end()
+			.find('.number').text(pokerNum(card.number)).end()
+		);
 		
-		ctx.fillRect(x, y, x+150, y+200);
 		return this;
 	}
 })(jQuery);
