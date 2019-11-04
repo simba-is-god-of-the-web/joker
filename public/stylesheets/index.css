@@ -1,12 +1,45 @@
-#main {
+body {
 	width: 90vw;
 	height: 90vh;
-
-	position: absolute;
-	left: 30%;
-	top: 30%;
-
-
+	
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
 }
-#container {
+
+#main {
+	position: fixed;
+	width: 340px;
+	height: 280px;
+	top: 50%;
+	left: 50%;
+	margin-top: -140px;
+	margin-left: -170px;
+	background: #42cf8b;
+	border-radius: 10px;
+	border: 5px solid #2a8559;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+input, button {
+	background: #47b580;
+	border-radius: 10px;
+	border: 3px solid #2a8559;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+input {
+	padding-left: 10px;
+}
+
+.error {
+	background-color: #f54e4e;
+	color: #754d4d;
+	border-color: #f70000;
+}
+
+@media screen and (max-width: 700px){
+	body{
+		font-size: 200%;
+	}
 }
