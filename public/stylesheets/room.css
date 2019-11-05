@@ -18,6 +18,7 @@ body {
 	width: 190px;
 	border-radius: 10px;
 	position: relative;
+	font-family: 'Supermercado One', cursive;
 }
 
 .suit, .number{
