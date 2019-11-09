@@ -2,3 +2,7 @@
 body {
 	font-family: 'Roboto Mono', monospace;
 }
+
+* {
+	margin: 10px;
+}

@@ -1,4 +1,5 @@
 var random = () => require('randombytes')(3).toString('hex').toUpperCase();
+var Player = require('./player.js');
 
 class Room{
 	constructor(name){
@@ -7,26 +8,31 @@ class Room{
 		this.players = [];
 	}
 	addPlayer(player){ // player <-- player object
-		if(player.id && player.name && player.ws) this.players.push(player);
+		if(this.players.includes(player)){
+			return new Error('Player already in this room');
+		}
+		if(this.players.length >= 4){
+			return new Error('There are too many player in this room');
+		}
+		if(player instanceof Player) this.players.push(player);
 		return this;
 	}
 	removePlayer(player){ // player <-- player object or name(begin with '%'), id(begin with '#') ws object
 		if(typeof player === 'object'){
-			
+			if(player instanceof Player){
+				this.players = this.players.filter((item)=>item !== player);
+			}else{
+				this.players = this.players.filter((item)=>item.ws !== player);
+			}
+		}else{
+			if(player.charAt(0) === '%'){
+				this.players = this.players.filter((item)=>item.name !== player.slice(1));
+			}else if(player.charAt(0) === '#'){
+				this.players = this.players.filter((item)=>item.id !== player.slice(1));
+			}
 		}
-		this.players = this.players.filter((item)=>item !== player);
-		return this;
-	}
-	removePlayerById(id){
-		this.players = this.players.filter((item)=>item.id !== id);
-		return this;
-	}
-	removePlayerByName(name){
-		this.players = this.players.filter((item)=>item.name !== name);
-		return this;
-	}
-	removePlayerByWs(Ws){
-		this.players = this.players.filter((item)=>item.ws !== ws);
 		return this;
 	}
 }
+
+module.exports = Room;

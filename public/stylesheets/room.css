@@ -26,16 +26,16 @@ body {
 	font-size: 100px;
 }
 .suit-positive{
-	top: -25%;
+	top: -5%;
 	left: -3%;
 }
 .suit-negative {
-	top: 45%;
-	left: 60%;
+	top: 55%;
+	left: 50%;
 	transform: rotate(-180deg);
 }
 
 .number {
-	top: 14%;
+	top: 30%;
 	left: 30%;
 }
