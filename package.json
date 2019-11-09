@@ -15,6 +15,7 @@
     "mongoose": "^5.7.8",
     "morgan": "~1.9.0",
     "nodemon": "^1.19.4",
+    "randombytes": "^2.1.0",
     "sqlite3": "^4.1.0"
   }
 }
