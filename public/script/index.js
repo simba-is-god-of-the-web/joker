@@ -1,4 +1,3 @@
-
 $('#join').click(function(){
 	var room = $('#roomId');
 	var username = $('#username');
@@ -7,10 +6,11 @@ $('#join').click(function(){
 		room.addClass('error');
 	}
 	if(!username.val()){
-		username.addclass('error');
+		username.addClass('error');
 	}
 	if(room.val() && username.val() && id.val()){
-		document.location.href = `/room?un=${username.val()}&roomid=${room.val()}&uid=${id.val()}`;
+		$.get(`/api/createUser/${username.val()}/${id.val()}`);
+		document.location.href = `/room/${room.val()}/${id.val()}`;
 	}
 });
 /*
