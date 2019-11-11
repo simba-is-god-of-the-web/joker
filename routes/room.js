@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var {roonPool} = require('../class/Game.js');
+var {roomPool} = require('../class/Game.js');
 
 /* GET room page. */
 router.get('/:room/:uid', function(req, res, next) {

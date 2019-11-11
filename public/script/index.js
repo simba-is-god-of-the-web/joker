@@ -13,6 +13,13 @@ $('#join').click(function(){
 		document.location.href = `/room/${room.val()}/${id.val()}`;
 	}
 });
+$('#create').click(() => {
+	$.get('/api/createRoom')
+		.done(data => {
+			$.get(`/api/createUser/${$('#username').val()}/${$('#id').val()}`);
+			document.location.href = `/room/${data.rid}/${$('#id').val()}`;
+		});
+});
 /*
 $('#start').click(function(){
 	le un = $('#username');

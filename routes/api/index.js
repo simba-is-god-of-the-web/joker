@@ -11,7 +11,7 @@ router.get('/getNewId', function(req, res, next){
 	res.send(id);
 });
 
-router.get('/createRoom/:name', function(req, res, next){
+router.get('/create/room/:name', function(req, res, next){
 	var room = new Room(req.params.name)
 	roomPool.push(room);
 	res.send(room.id);
