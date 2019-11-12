@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var {roomPool, Room} = require('../../class/Game.js');
 
+router.use('/user', require('./createUser.js'));
+
 router.get('/', function(req, res, next) {
   res.render('default', { title: 'API', message: 'Home page of api' });
 });
@@ -20,5 +22,6 @@ router.get('/create/room/:name', function(req, res, next){
 router.get('/lsRoom', function(req, res, next){
 	res.send(roomPool);
 });
+
 
 module.exports = router;
